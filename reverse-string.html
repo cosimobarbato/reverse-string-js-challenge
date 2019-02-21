@@ -1,0 +1,55 @@
+<!-- Have the function FirstReverse(str) take the str parameter being passed and return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string "sredoC dna dlroW olleH".  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reverse String JS Code Challenge</title>
+  <style>
+    .card{
+      width: 800px;
+      height: 300px;
+      margin: 0 auto;
+      background: #eee;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Initial String:</h3>
+    <span id="initial"></span>
+    <h3>Reversed String:</h3>
+    <span id="reversed"></span>
+  </div>
+  
+  <script>
+
+    // Function to reverse string entered
+    function firstReverse(str){
+      str = str.split("");
+      let reverse = "";
+      for (let i = (str.length - 1); i >= 0; i--){
+        reverse += str[i];
+      }
+      return reverse;
+    }
+
+    // String to reverse in function
+    let initialString = "Today is a good day!";
+
+    // Save reversed string in variable and call reverse function
+    let reverseString = firstReverse(initialString);
+
+
+    // Insert Initial String Into the DOM
+    document.getElementById('initial').innerText = initialString;
+
+    // Insert Reversed String Into the DOM
+    document.getElementById('reversed').innerText = reverseString;
+  </script>
+</body>
+</html>
